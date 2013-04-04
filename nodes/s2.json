@@ -1,0 +1,6 @@
+{
+	"run_list": [
+	  "recipe[oracle_jre]"
+	]
+}
+
