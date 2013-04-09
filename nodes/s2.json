@@ -1,6 +1,27 @@
 {
 	"run_list": [
-	  "recipe[oracle_jre]"
-	]
+	  "role[hadoop]"
+	],
+	"hadoop" : {
+	  "fs.default.name" : "hdfs://master:9000",
+	  "mapred.job.tracker" : "master:9001",
+	  "mapred.tasktracker.map.tasks.maximum" : 1,
+	  "hosts": [
+	    {"ip":"192.168.100.100","host_name":"master"},
+	    {"ip":"192.168.100.101","host_name":"s1"},
+	    {"ip":"192.168.100.102","host_name":"s2"},
+	    {"ip":"192.168.100.103","host_name":"s3"},
+	    {"ip":"192.168.100.104","host_name":"s4"},
+	    {"ip":"192.168.100.105","host_name":"s5"}
+	  ],
+	  "slaves" : ["s1","s2","s3","s4","s5"]
+
+	},
+        "ssh" : {
+	  "user" : "hadoop",
+	  "group" : "hadoop"
+        }
+
 }
+
 

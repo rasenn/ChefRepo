@@ -1,0 +1,23 @@
+#
+# Cookbook Name:: ssh_nopass
+# Recipe:: default
+]+"/.ssh" do 
+    owner "hadoop"
+    group "hadoop"
+    mode 0755
+    action :create
+    not_if { File.exists?('/home/hadoop/.ssh') }
+  end
+
+  bash "generate ssh key" do
+     user "hadoop"
+     code <<-EOC
+          ssh-keygen -N '' -f '/home/hadoop/.ssh/id_rsa' 
+     EOC
+     not_if { File.exists?('/home/hadoop/.ssh/id_rsa') }
+  end
+
+end
+
+
+

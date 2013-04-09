@@ -1,0 +1,4 @@
+<% if node["hadoop"]["masters"] %>
+  <% node["hadoop"]["masters"].each do |m| %>
+  <% end %>
+<% end %>

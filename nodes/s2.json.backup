@@ -1,0 +1,17 @@
+{
+	"run_list": [
+	  "role[hadoop]"
+	],
+	"hadoop" : {
+	  "fs.default.name" : "hdfs://s2:9000",
+	  "mapred.job.tracker" : "s2:9001",
+	  "hosts" : [
+	      {"ip":"192.168.100.101","host_name":"s2"}
+	    ]
+	},
+	"ssh" : {
+	  "user" : "hadoop",
+	  "group" : "hadoop"
+	}
+}
+

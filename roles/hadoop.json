@@ -1,0 +1,23 @@
+{
+  "name" : "hadoop",
+  "default_attributes" : {
+    "java" : {
+      "oracle" : {
+        "accept_oracle_download_terms" : true
+      }
+    }
+  },
+  "override_attributes" : {},
+  "json_class": "Chef::Role",
+  "description":"",
+  "chef_type":"role",
+  "run_list":[
+          "recipe[chef]",
+          "recipe[java::oracle]",
+          "recipe[hadoop]",
+	  "recipe[ssh_nopass]"
+  ]
+
+
+}
+
