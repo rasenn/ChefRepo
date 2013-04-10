@@ -21,7 +21,7 @@ user "hadoop" do
      group    "hadoop"
      home     "/home/hadoop"
      shell "/bin/bash"
-     password nil
+     password node["hadoop"]["password"]
      supports :manage_home => true
 end
 

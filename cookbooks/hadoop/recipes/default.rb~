@@ -20,9 +20,9 @@ user "hadoop" do
      uid      412
      group    "hadoop"
      home     "/home/hadoop"
+     shell "/bin/bash"
      password nil
      supports :manage_home => true
-     action   [:create]
 end
 
 

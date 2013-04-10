@@ -6,13 +6,13 @@ default["hadoop"]["hadoop.tmp.dir"] = "/usr/local/hadoop/datas/tmp"
 default["hadoop"]["fs.default.name"] = "file:///usr/local/hadoop/data/name"
 
 ## hdfs-site.xml.erb
-default["hadoop"]["dfs.replication"] = 2
+default["hadoop"]["dfs.replication"] = 1
 
 ## mapred-site.xml.erb
 default["hadoop"]["mapred.job.tracker"] = "local"
 default["hadoop"]["mapred.map.tasks"] = 20
-default["hadoop"]["mapred.reduce.tasks"] = 1
-default["hadoop"]["mapred.tasktracker.map.tasks.maximum"] = 2
+default["hadoop"]["mapred.reduce.tasks"] = 20
+default["hadoop"]["mapred.tasktracker.map.tasks.maximum"] = 1
 default["hadoop"]["mapred.tasktracker.reduce.tasks.maximum"] = 1
 
 

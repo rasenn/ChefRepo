@@ -25,3 +25,5 @@ default["hadoop"]["slaves"] = ["localhost"]
 ## hosts.erb
 default["hadoop"]["hosts"] = [] #[{"ip" => "127.0.0.1","host_name" => "localhost"}]
 
+## user_password
+default["hadoop"]["password"] = "hadoop987"
