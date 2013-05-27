@@ -1,6 +1,8 @@
 {
-  "run_list" : [
-    "recipe[jubatus]"
-  ]
+	"run_list": [
+	  "recipe[jubatus]",
+	  "recipe[jubatus::ruby]"
+	]
 }
+
 
